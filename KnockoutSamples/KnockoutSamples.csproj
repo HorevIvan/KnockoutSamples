@@ -57,12 +57,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages\knockoutjs.3.1.0\Content\Scripts\knockout-3.1.0.debug.js" />
+    <Content Include="packages\knockoutjs.3.1.0\Content\Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\knockout-3.1.0.debug.js" />
+    <Content Include="Scripts\knockout-3.1.0.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="packages\knockoutjs.3.1.0\knockoutjs.3.1.0.nupkg" />
+    <Content Include="packages\knockoutjs.3.1.0\knockoutjs.3.1.0.nuspec" />
+    <Content Include="packages\repositories.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
