@@ -19,7 +19,7 @@
                 koVersion = ko.version;
             }
 
-            ko.applyBindings(new PageViewModel());
+            ko.applyBindings(new PageViewModel(), $("#versions")[0]);
         });
     </script>
     <style>
@@ -38,9 +38,9 @@
 <body>
     <form id="KnockoutJSForm" runat="server">
         <div>
-            <div class="frm">   
-                KnockoutJS <span data-bind="text: koVersion"></span><br />
-                jQuery <span data-bind="text: jqVersion"></span>
+            <div id="versions" class="frm">   
+                KnockoutJS: v<span data-bind="text: koVersion"></span><br />
+                jQuery: v<span data-bind="text: jqVersion"></span>
             </div>            
         </div>
         <div class="frm">
