@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="KnockoutSamples.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>KnockoutJS samples</title>
+    <% #if DEBUG %>
+        <script type="text/javascript" src="/Scripts/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/Scripts/knockout-3.1.0.debug.js"></script>
+    <% #else %>
+        <script type="text/javascript" src="/Scripts/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/Scripts/knockout-3.1.0.js"></script>
+    <% #endif %>
+    <script>
+        $(document).ready(function () {
+            function PageViewModel() {
+                jqVersion = $.fn.jquery;
+                koVersion = ko.version;
+            }
+
+            ko.applyBindings(new PageViewModel());
+        });
+    </script>
+    <style>
+        #KnockoutJSForm {
+            padding: 10px;
+        }
+        .frm {
+            padding: 20px;
+            border: 1px solid silver;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="Head" runat="server" />
+</head>
+<body>
+    <form id="KnockoutJSForm" runat="server">
+        <div>
+            <div class="frm">   
+                KnockoutJS <span data-bind="text: koVersion"></span><br />
+                jQuery <span data-bind="text: jqVersion"></span>
+            </div>            
+        </div>
+        <div class="frm">
+            <asp:ContentPlaceHolder ID="Body" runat="server" />
+        </div> 
+    </form>
+</body>
+</html>
