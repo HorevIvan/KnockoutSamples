@@ -58,11 +58,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <None Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1-vsdoc.js" />
+    <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.js" />
+    <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.min.js" />
+    <None Include="packages\jQuery.2.1.1\Tools\jquery-2.1.1.intellisense.js" />
     <Content Include="packages\knockoutjs.3.1.0\Content\Scripts\knockout-3.1.0.debug.js" />
     <Content Include="packages\knockoutjs.3.1.0\Content\Scripts\knockout-3.1.0.js" />
+    <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.min.map" />
+    <Content Include="packages\jQuery.2.1.1\jQuery.2.1.1.nupkg" />
+    <Content Include="packages\jQuery.2.1.1\jQuery.2.1.1.nuspec" />
+    <Content Include="packages\jQuery.2.1.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.2.1.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.2.1.1\Tools\uninstall.ps1" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="default.aspx.cs">

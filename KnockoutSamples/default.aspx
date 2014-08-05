@@ -6,15 +6,23 @@
     <head runat="server">
         <title></title>
         <% #if DEBUG %>
+            <script type="text/javascript" src="/Scripts/jquery-2.1.1.js"></script>
             <script type="text/javascript" src="/Scripts/knockout-3.1.0.debug.js"></script>
         <% #else %>
+            <script type="text/javascript" src="/Scripts/jquery-2.1.1.min.js"></script>
             <script type="text/javascript" src="/Scripts/knockout-3.1.0.js"></script>
         <% #endif %>
+        <script>
+            $(document).ready(function () {
+                $('#jq_version').html($.fn.jquery);
+            });
+        </script>
     </head>
     <body>
         <form id="knokoutForm" runat="server">
             <div>   
-                KnockoutJS sample    
+                KnockoutJS sample  <br />
+                jQuery <span id="jq_version"></span>
             </div>
         </form>
 </body>
