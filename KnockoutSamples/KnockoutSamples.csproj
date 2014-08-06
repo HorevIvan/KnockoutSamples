@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="MakingTheDataEditable.aspx" />
+    <Content Include="BindingInputs.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.js" />
@@ -88,12 +88,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MakingTheDataEditable.aspx.cs">
-      <DependentUpon>MakingTheDataEditable.aspx</DependentUpon>
+    <Compile Include="BindingInputs.aspx.cs">
+      <DependentUpon>BindingInputs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MakingTheDataEditable.aspx.designer.cs">
-      <DependentUpon>MakingTheDataEditable.aspx</DependentUpon>
+    <Compile Include="BindingInputs.aspx.designer.cs">
+      <DependentUpon>BindingInputs.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

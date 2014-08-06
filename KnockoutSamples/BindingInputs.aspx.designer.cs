@@ -11,7 +11,7 @@ namespace KnockoutSamples
 {
 
 
-    public partial class MakingTheDataEditable
+    public partial class BindingInputs
     {
     }
 }

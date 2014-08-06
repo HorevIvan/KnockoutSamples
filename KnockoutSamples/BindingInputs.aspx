@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="MakingTheDataEditable.aspx.cs" Inherits="KnockoutSamples.MakingTheDataEditable" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="BindingInputs.aspx.cs" Inherits="KnockoutSamples.BindingInputs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <script>
 
