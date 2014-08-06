@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Collections.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Introduction.aspx" />
     <Content Include="MasterPage.Master" />
@@ -81,6 +82,13 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections.aspx.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collections.aspx.designer.cs">
+      <DependentUpon>Collections.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

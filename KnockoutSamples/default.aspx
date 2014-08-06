@@ -3,5 +3,6 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-
+    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Introduction.aspx" runat="server">Introduction</asp:HyperLink><br />
+    <asp:HyperLink ID="HyperLink2" NavigateUrl="~/Collections.aspx" runat="server">Collections</asp:HyperLink>
 </asp:Content>
