@@ -5,7 +5,7 @@
 
         $(document).ready(function () {
 
-            dataRoot = $("#Data")[0];
+            dataRoot = $("#Introduction")[0];
 
             Binding("Horev", "Ivan");
         });
@@ -33,7 +33,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <div id="Data">
+    <div id="Introduction">
         <p>First name: <input data-bind="value: firstName" /> (update by lost focus)</p>
         <p>Last name: <input data-bind="value: lastName, valueUpdate: 'afterkeydown'" /> (update by keydown)</p>
         <br />
