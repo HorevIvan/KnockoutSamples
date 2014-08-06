@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Introduction.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.js" />
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Introduction.aspx.cs">
+      <DependentUpon>Introduction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Introduction.aspx.designer.cs">
+      <DependentUpon>Introduction.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
