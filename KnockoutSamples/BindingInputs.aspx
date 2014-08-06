@@ -30,7 +30,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <div id="InputData">
         <p>First name: <input data-bind="value: firstName" /></p>
-        <p>Last name: <input data-bind="value: lastName" /></p>
+        <p>Last name: <input data-bind="value: lastName, valueUpdate: 'afterkeydown'" /></p>
         <br />
         <br />
         <span data-bind="text: hellow"></span>
