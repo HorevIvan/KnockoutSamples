@@ -1,6 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="KnockoutSamples.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+    <script>
+            var dataRoot;
+
+            $(document).ready(function () {
+
+                dataRoot = $("#Data")[0];
+
+                Binding("Horev", "Ivan");
+            });
+
+            function AppViewModel(fn, ln) {
+                firstName = ko.observable(fn);
+                lastName = ko.observable(ln);
+                hellow = ko.computed(function () {
+                    if (firstName().length > 0 && lastName().length > 0)
+                        return "Hellow " + firstName() + " " + lastName();
+                    else
+                        return "";
+                }, this);
+            }
+
+            function Binding(fn, ln) {
+                ko.applyBindings(new AppViewModel(fn, ln), dataRoot);
+            }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/BindingInputs.aspx" runat="server">Binding inputs</asp:HyperLink>
+     <div id="Data">
+        <p>First name: <input data-bind="value: firstName" /> (update by lost focus)</p>
+        <p>Last name: <input data-bind="value: lastName, valueUpdate: 'afterkeydown'" /> (update by keydown)</p>
+        <br />
+        <br />
+        <span data-bind="text: hellow"></span>
+    </div>
 </asp:Content>
