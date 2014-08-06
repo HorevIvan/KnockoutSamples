@@ -6,7 +6,7 @@
 
         $(document).ready(function () {
 
-            dataRoot = $("#data")[0]; //важно
+            dataRoot = $("#InputData")[0]; //важно
 
             Binding("Horev", "Ivan");
         });
@@ -14,6 +14,12 @@
         function AppViewModel(fn, ln) {
             firstName = ko.observable(fn);
             lastName = ko.observable(ln);
+            hellow = ko.computed(function () {
+                if (firstName().length > 0 && lastName().length > 0)
+                    return "Hellow " + firstName() + " " + lastName();
+                else
+                    return "";
+            }, this);
         }
 
         function Binding(fn, ln) {
@@ -22,8 +28,11 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <div id="data">
+    <div id="InputData">
         <p>First name: <input data-bind="value: firstName" /></p>
         <p>Last name: <input data-bind="value: lastName" /></p>
+        <br />
+        <br />
+        <span data-bind="text: hellow"></span>
     </div>
 </asp:Content>
