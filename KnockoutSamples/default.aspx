@@ -11,14 +11,20 @@
             });
 
             function AppViewModel(fn, ln) {
+
                 firstName = ko.observable(fn);
                 lastName = ko.observable(ln);
+
                 hellow = ko.computed(function () {
                     if (firstName().length > 0 && lastName().length > 0)
-                        return "Hellow " + firstName() + " " + lastName();
+                        return "Hello " + firstName() + " " + lastName();
                     else
                         return "";
                 }, this);
+
+                fnToUpperCase = function () {
+                    firstName(firstName().toUpperCase());
+                };
             }
 
             function Binding(fn, ln) {
@@ -33,5 +39,10 @@
         <br />
         <br />
         <span data-bind="text: hellow"></span>
+        <br />
+        <br />
+        <div data-bind="click: fnToUpperCase" style="display: inline-block; padding: 7px 12px 7px 12px; background-color: silver; border: 1px solid black; border-radius: 4px; cursor: pointer;">
+            First name to upper case
+        </div>
     </div>
 </asp:Content>
