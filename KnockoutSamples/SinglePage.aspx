@@ -15,10 +15,13 @@
             var self = this;
             self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
             self.chosenFolderId = ko.observable();
+            self.chosenFolderData = ko.observable();
 
             self.goToFolder = function (folder) {
                 self.chosenFolderId(folder);
             };
+
+            self.goToFolder('Inbox');
         };
     </script>
 </asp:Content>
@@ -26,7 +29,10 @@
     <div id="SinglePage">
         Click items...
         <ul class="folders" data-bind="foreach: folders">
-            <li data-bind="text: $data, style: { 'font-weight': $data == $root.chosenFolderId() ? 'bold' : 'normal' }, click: $root.goToFolder"></li>
+            <li data-bind="text: $data,
+                           style: { 'font-weight': $data == $root.chosenFolderId() ? 'bold' : 'normal' },
+                           click: $root.goToFolder"></li>
         </ul>
+
     </div>
 </asp:Content>
