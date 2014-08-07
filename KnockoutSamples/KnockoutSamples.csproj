@@ -58,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Collections.aspx" />
+    <Content Include="DataService.asmx" />
     <Content Include="Default.aspx" />
     <Content Include="Introduction.aspx" />
+    <Content Include="jQueryAjax.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.js" />
@@ -90,6 +92,10 @@
     <Compile Include="Collections.aspx.designer.cs">
       <DependentUpon>Collections.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataService.asmx.cs">
+      <DependentUpon>DataService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +109,13 @@
     </Compile>
     <Compile Include="Introduction.aspx.designer.cs">
       <DependentUpon>Introduction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jQueryAjax.aspx.cs">
+      <DependentUpon>jQueryAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryAjax.aspx.designer.cs">
+      <DependentUpon>jQueryAjax.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
