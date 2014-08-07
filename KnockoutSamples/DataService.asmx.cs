@@ -22,5 +22,23 @@ namespace KnockoutSamples
         {
             return "Hello World";
         }
+
+        [WebMethod]
+        public List<Employee> GetEmployees()
+        {
+            return (new List<Employee>
+            {
+                new Employee { FirstName = "Ivan", LastName = "Horev" },
+                new Employee { FirstName = "Aleksandr", LastName = "Pushkin" },
+            });
+        }
+    }
+
+    [Serializable]
+    public class Employee
+    {
+        public String FirstName { set; get; }
+
+        public String LastName { set; get; }
     }
 }

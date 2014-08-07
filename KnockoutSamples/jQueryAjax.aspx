@@ -3,21 +3,29 @@
     <script>
         $(document).ready(function () {
             $("#button").click(function () {
-                var soapMessage =
-                    "<?xml version='1.0' encoding='utf-8'?>"+
-                    "<soap12:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap12='http://www.w3.org/2003/05/soap-envelope'>"+
-                    "  <soap12:Body>"+
-                    "    <HelloWorld xmlns='http://tempuri.org/' />"+
-                    "  </soap12:Body>"+
-                    "</soap12:Envelope>";
-
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:53643/DataService.asmx/HelloWorld",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data, status, req, xml, xmlHttpRequest, responseXML) {
-                        alert(data.d);
+                        $('#hellow').html(data.d);
+                    },
+                    error: function (data, status, req) {
+                        alert(status);
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:53643/DataService.asmx/GetEmployees",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data, status, req, xml, xmlHttpRequest, responseXML) {
+                        var employees = data.d;
+                        $('#out').empty();
+                        $.each(employees, function (index, employee) {
+                            $('#out').append('<p><strong>' + employee.FirstName + ' ' + employee.LastName + '</strong></p>');
+                        });
                     },
                     error: function (data, status, req) {
                         alert(status);
@@ -30,6 +38,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <input id="button" type="button" value="click" />
     <br />
-    <div id="answer">
+    <div id="hellow">
+    </div>
+    <div id="out">
     </div>
 </asp:Content>
