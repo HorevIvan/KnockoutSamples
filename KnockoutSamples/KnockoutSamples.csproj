@@ -62,6 +62,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Introduction.aspx" />
     <Content Include="jQueryAjax.aspx" />
+    <Content Include="KnockoutAjax.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="packages\jQuery.2.1.1\Content\Scripts\jquery-2.1.1.js" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="jQueryAjax.aspx.designer.cs">
       <DependentUpon>jQueryAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KnockoutAjax.aspx.cs">
+      <DependentUpon>KnockoutAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KnockoutAjax.aspx.designer.cs">
+      <DependentUpon>KnockoutAjax.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
